@@ -1,6 +1,6 @@
 # 启动服务
 * 源码
-mvn exec:java -Dexec.mainClass="com.alibaba.fescar.server.Server" -Djava.net.preferIPv4Stack=true
+mvn exec:java -Dexec.mainClass="com.alibaba.fescar.server.Server" -Dexec.args="8091 /Users/m65536/Downloads/fescar-server-0.1.0/data"
 
 * 编译后的包
 sh fescar-server.sh 8091 /Users/m65536/Downloads/fescar-server-0.1.0/data
