@@ -1,24 +1,40 @@
-# 启动服务
-* 源码
+# 本地测试
+### 启动服务
+* 源码启动
+```
 mvn exec:java -Dexec.mainClass="com.alibaba.fescar.server.Server" -Dexec.args="8091 /Users/m65536/Downloads/fescar-server-0.1.0/data"
+```
 
 * 编译后的包
+```
 sh fescar-server.sh 8091 /Users/m65536/Downloads/fescar-server-0.1.0/data
+```
 
-# 启动example
-### 先修改数据库配置
+### 启动example
+* 首先修改数据库配置保证可以正常连接
+
 * AccountServiceImpl
+```
 mvn exec:java -Dexec.mainClass="com.alibaba.fescar.tm.dubbo.impl.AccountServiceImpl" -Djava.net.preferIPv4Stack=true
+```
 
 * StorageServiceImpl
+```
 mvn exec:java -Dexec.mainClass="com.alibaba.fescar.tm.dubbo.impl.StorageServiceImpl" -Djava.net.preferIPv4Stack=true
+```
 
 
 * OrderServiceImpl 
+```
 mvn exec:java -Dexec.mainClass="com.alibaba.fescar.tm.dubbo.impl.OrderServiceImpl" -Djava.net.preferIPv4Stack=true
+```
 
 * BusinessServiceImpl调用测试
+```
 mvn exec:java -Dexec.mainClass="com.alibaba.fescar.tm.dubbo.impl.BusinessServiceImpl" -Djava.net.preferIPv4Stack=true
+```
+
+---
 
 
 
