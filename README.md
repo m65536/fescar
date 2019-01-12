@@ -1,11 +1,17 @@
 # 本地测试
+
+### 编译源码
+* mvn compile
+* mvn install
+
 ### 启动服务
-* 源码启动
+* 源码启动方式
 ```
+cd cd server
 mvn exec:java -Dexec.mainClass="com.alibaba.fescar.server.Server" -Dexec.args="8091 /Users/m65536/Downloads/fescar-server-0.1.0/data"
 ```
 
-* 编译后的包
+* release包启动方式
 ```
 sh fescar-server.sh 8091 /Users/m65536/Downloads/fescar-server-0.1.0/data
 ```
@@ -15,22 +21,26 @@ sh fescar-server.sh 8091 /Users/m65536/Downloads/fescar-server-0.1.0/data
 
 * AccountServiceImpl
 ```
+cd examples
 mvn exec:java -Dexec.mainClass="com.alibaba.fescar.tm.dubbo.impl.AccountServiceImpl" -Djava.net.preferIPv4Stack=true
 ```
 
 * StorageServiceImpl
 ```
+cd examples
 mvn exec:java -Dexec.mainClass="com.alibaba.fescar.tm.dubbo.impl.StorageServiceImpl" -Djava.net.preferIPv4Stack=true
 ```
 
 
 * OrderServiceImpl 
 ```
+cd examples
 mvn exec:java -Dexec.mainClass="com.alibaba.fescar.tm.dubbo.impl.OrderServiceImpl" -Djava.net.preferIPv4Stack=true
 ```
 
 * BusinessServiceImpl调用测试
 ```
+cd examples
 mvn exec:java -Dexec.mainClass="com.alibaba.fescar.tm.dubbo.impl.BusinessServiceImpl" -Djava.net.preferIPv4Stack=true
 ```
 
